@@ -1,0 +1,46 @@
+alias chrome="open /Applications/Google\ Chrome.app/ "
+alias c="clear"
+alias mv="mv -i"
+alias h="history -l"
+
+# UW aliases
+attu() {
+	ssh alatif@attu"$1".cs.washington.edu
+}
+
+pushToAttu() {
+	scp "$1" alatif@attu.cs.washington.edu:~
+}
+
+pullFromAttu() {
+	scp alatif@attu.cs.washington.edu:~/"$1" .
+}
+
+pullFromAbsoluteAttu() {
+	scp alatif@attu.cs.washington.edu:"$1" .
+}
+
+# Critter tournament automation command
+change() {
+	sed -i.new 's/Husky/"$1"/' "$1".java
+}
+
+gradeit() {
+	chrome "https://gradeit.cs.washington.edu/uwcse/admin/section_view.php?course=142&quarter=20wi&assignment=a$1&section=AN"
+	chrome "https://cubist.cs.washington.edu/cse143-admin/index.php/142_Assignment_$1_20_wi"
+	chrome "https://docs.google.com/document/d/1zeBmYCN-XvTu7k79-AV6UPvN4KcNKSlKzknF_usv1YE/edit#heading=h.qxeue832inw7"
+}
+
+pythonServer() {
+	python -m SimpleHTTPServer 8000
+}
+
+changeLoginMessage() {
+	sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "$1"
+}
+
+st() {
+	echo "will sleep in $1 minutes."
+	sleep $(($1 * 60))
+	pmset sleepnow
+}
