@@ -15,4 +15,4 @@ brew "jenv"
 
 # languages
 brew "python"
-cask "java"
+cask "java11"

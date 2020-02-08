@@ -2,6 +2,7 @@ alias chrome="open /Applications/Google\ Chrome.app/ "
 alias c="clear"
 alias mv="mv -i"
 alias h="history -l"
+alias python="/usr/local/bin/python3"
 
 # UW aliases
 attu() {
