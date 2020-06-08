@@ -5,7 +5,7 @@ cask "visual-studio-code"
 cask "intellij-idea-ce"
 cask "iterm2"
 cask "alfred"
-cask "spectacle"
+cask "rectangle""
 
 # cli tools
 brew "z" # add source to .zshrc, brew info z to see
